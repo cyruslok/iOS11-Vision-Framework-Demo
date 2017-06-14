@@ -8,4 +8,5 @@
     Develop environment:
         1. Xcode 9.0 beta
         2. iOS 11 beta
+        3. Swift
     
