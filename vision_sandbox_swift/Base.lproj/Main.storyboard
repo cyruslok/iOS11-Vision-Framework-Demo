@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="58x-5W-biY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Static Image-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="vision_sandbox_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t9h-3r-gxC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="326"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTP-DG-6HS">
+                                <rect key="frame" x="16" y="334" width="76" height="30"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="Take_Photo_OnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ZM-7j-LKc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kW2-LL-L4E">
+                                <rect key="frame" x="272" y="334" width="87" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="tpk-r4-uJ3"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="Clear_Photo_OnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2FW-nl-gIQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fer-nx-QoE">
+                                <rect key="frame" x="16" y="372" width="170" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" id="c55-Nh-Adg"/>
+                                </constraints>
+                                <state key="normal" title="Face Dectection"/>
+                                <connections>
+                                    <action selector="Face_Dectection_OnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZe-Dx-fq1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFt-m3-FO4">
+                                <rect key="frame" x="118" y="334" width="138" height="30"/>
+                                <state key="normal" title="Photo By Lib"/>
+                                <connections>
+                                    <action selector="Photo_By_Lib_OnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVs-NK-ctb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC1-0r-JBg">
+                                <rect key="frame" x="194" y="372" width="165" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="2Jq-za-FKc"/>
+                                </constraints>
+                                <state key="normal" title="Text Dectection"/>
+                                <connections>
+                                    <action selector="Text_Dectection_OnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVF-h9-GIe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fer-nx-QoE" firstAttribute="top" secondItem="yC1-0r-JBg" secondAttribute="top" id="1Zy-Z2-ntF"/>
+                            <constraint firstItem="fTP-DG-6HS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8eH-Cn-RfP"/>
+                            <constraint firstItem="t9h-3r-gxC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KO2-6Y-kir"/>
+                            <constraint firstItem="yC1-0r-JBg" firstAttribute="leading" secondItem="Fer-nx-QoE" secondAttribute="trailing" constant="8" symbolic="YES" id="O1T-bq-fqI"/>
+                            <constraint firstItem="t9h-3r-gxC" firstAttribute="centerX" secondItem="TFt-m3-FO4" secondAttribute="centerX" id="RaH-mW-VgP"/>
+                            <constraint firstItem="fTP-DG-6HS" firstAttribute="baseline" secondItem="TFt-m3-FO4" secondAttribute="baseline" id="VgT-yb-TAw"/>
+                            <constraint firstItem="TFt-m3-FO4" firstAttribute="baseline" secondItem="kW2-LL-L4E" secondAttribute="baseline" id="bE8-5M-2yV"/>
+                            <constraint firstItem="fTP-DG-6HS" firstAttribute="top" secondItem="t9h-3r-gxC" secondAttribute="bottom" constant="8" symbolic="YES" id="cOD-LF-bjA"/>
+                            <constraint firstItem="t9h-3r-gxC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ekB-Ku-ewA"/>
+                            <constraint firstItem="kW2-LL-L4E" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="emN-qN-1CO"/>
+                            <constraint firstItem="fTP-DG-6HS" firstAttribute="leading" secondItem="Fer-nx-QoE" secondAttribute="leading" id="ihG-GQ-xeh"/>
+                            <constraint firstItem="yC1-0r-JBg" firstAttribute="baseline" secondItem="Fer-nx-QoE" secondAttribute="firstBaseline" id="ljw-bM-cyw"/>
+                            <constraint firstItem="Fer-nx-QoE" firstAttribute="baseline" secondItem="yC1-0r-JBg" secondAttribute="firstBaseline" id="nD3-Vt-2We"/>
+                            <constraint firstItem="kW2-LL-L4E" firstAttribute="trailing" secondItem="yC1-0r-JBg" secondAttribute="trailing" id="q3G-Zx-iZc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fer-nx-QoE" secondAttribute="bottom" constant="57" id="s4l-H9-x6q"/>
+                            <constraint firstItem="Fer-nx-QoE" firstAttribute="top" secondItem="fTP-DG-6HS" secondAttribute="bottom" constant="8" symbolic="YES" id="saY-cU-Cww"/>
+                            <constraint firstItem="kW2-LL-L4E" firstAttribute="leading" secondItem="TFt-m3-FO4" secondAttribute="trailing" constant="16" id="wmb-pi-tfK"/>
+                            <constraint firstAttribute="trailing" secondItem="t9h-3r-gxC" secondAttribute="trailing" id="yJn-NU-I9d"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Static Image" image="1" id="1W6-XS-8tR"/>
+                    <connections>
+                        <outlet property="Camera_Image_View" destination="t9h-3r-gxC" id="5o5-i3-dJh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736.79999999999995" y="122.78860569715144"/>
+        </scene>
+        <!--Text Realtime-->
+        <scene sceneID="O2X-ls-d5s">
+            <objects>
+                <viewController id="iyj-SJ-txr" customClass="RealtimeViewController" customModule="vision_sandbox_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wpt-zL-ADh"/>
+                        <viewControllerLayoutGuide type="bottom" id="tyR-Co-ujz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kOb-jT-E6O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlay" translatesAutoresizingMaskIntoConstraints="NO" id="DTp-41-COT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DTp-41-COT" secondAttribute="trailing" id="6ob-ZW-Qvj"/>
+                            <constraint firstItem="DTp-41-COT" firstAttribute="top" secondItem="kOb-jT-E6O" secondAttribute="top" id="OTH-kK-n9J"/>
+                            <constraint firstItem="tyR-Co-ujz" firstAttribute="top" secondItem="DTp-41-COT" secondAttribute="bottom" constant="-49" id="vyH-Cl-PPO"/>
+                            <constraint firstItem="DTp-41-COT" firstAttribute="leading" secondItem="kOb-jT-E6O" secondAttribute="leading" id="ycM-pE-tCe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Text Realtime" image="2" id="BBr-DR-vqm"/>
+                    <connections>
+                        <outlet property="CameraOverlayView" destination="DTp-41-COT" id="nL8-Gw-CGe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbE-87-0Wi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736.79999999999995" y="877.51124437781118"/>
+        </scene>
+        <!--Face RealTime-->
+        <scene sceneID="zhX-HN-T0E">
+            <objects>
+                <viewController id="8UW-jw-xz4" customClass="RealtimeFaceViewController" customModule="vision_sandbox_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0kX-M5-WlY"/>
+                        <viewControllerLayoutGuide type="bottom" id="V6b-Qe-maM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zr5-pc-uTR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlay" translatesAutoresizingMaskIntoConstraints="NO" id="xv2-hi-WMp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKy-c2-FjW">
+                                <rect key="frame" x="112" y="568" width="151" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="C9h-t0-nZj"/>
+                                </constraints>
+                                <state key="normal" title="Switch Camera">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn_switchCamera:" destination="8UW-jw-xz4" eventType="touchUpInside" id="oaH-rq-Z7l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xv2-hi-WMp" secondAttribute="trailing" id="AAJ-in-1sG"/>
+                            <constraint firstItem="V6b-Qe-maM" firstAttribute="top" secondItem="KKy-c2-FjW" secondAttribute="bottom" id="Cde-1E-nhN"/>
+                            <constraint firstItem="xv2-hi-WMp" firstAttribute="leading" secondItem="Zr5-pc-uTR" secondAttribute="leading" id="NUn-JK-X1p"/>
+                            <constraint firstItem="KKy-c2-FjW" firstAttribute="centerX" secondItem="xv2-hi-WMp" secondAttribute="centerX" id="OJG-Xj-NkC"/>
+                            <constraint firstItem="KKy-c2-FjW" firstAttribute="top" secondItem="0kX-M5-WlY" secondAttribute="bottom" constant="548" id="ckt-yL-N6L"/>
+                            <constraint firstItem="xv2-hi-WMp" firstAttribute="bottom" secondItem="V6b-Qe-maM" secondAttribute="top" constant="49" id="f5S-4q-UfH"/>
+                            <constraint firstItem="xv2-hi-WMp" firstAttribute="top" secondItem="Zr5-pc-uTR" secondAttribute="top" id="phy-pb-yEA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Face RealTime" image="3" id="NHv-lf-oG2"/>
+                    <connections>
+                        <outlet property="CameraOverlayView" destination="xv2-hi-WMp" id="jDv-em-ie5"/>
+                        <outlet property="btn_switchCamera" destination="KKy-c2-FjW" id="Pm1-hk-yWD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5z-Pc-OGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-182.5" y="1032.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nmj-kd-m04">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="58x-5W-biY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Alg-Iq-4vR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="xiJ-XO-8TA"/>
+                        <segue destination="iyj-SJ-txr" kind="relationship" relationship="viewControllers" id="dfF-E4-Qc1"/>
+                        <segue destination="8UW-jw-xz4" kind="relationship" relationship="viewControllers" id="b8M-zA-8w2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUZ-HB-f82" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-182.40000000000001" y="123.23838080959521"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="25" height="25"/>
+        <image name="2" width="25" height="25"/>
+        <image name="3" width="26" height="26"/>
+        <image name="overlay" width="720" height="1280"/>
+    </resources>
+</document>
